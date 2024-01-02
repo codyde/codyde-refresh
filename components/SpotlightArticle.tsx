@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { FaBlog } from 'react-icons/fa';
+import React from "react";
+import { FaBlog } from "react-icons/fa";
 
 type SpotlightArticleProps = {
   publication: string;
@@ -16,14 +15,20 @@ const SpotlightArticle: React.FC<SpotlightArticleProps> = ({
   link,
 }) => {
   return (
-    <div className='grid'>
-      <p className='text-xl text-gray-200/50 font-semibold'>{publication}</p>
-      <div className='flex flex-row items-center'>
-      <FaBlog size={24} className="text-white mr-2" />
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <p className='text-2xl font-bold text-orange-600'>{title}</p></a>
+    <div className="grid">
+      <div className="flex flex-row items-center">
+        <span className="mr-4">
+          <FaBlog size={24} className="dark:text-white text-black" />
+        </span>
+        <div className="grid">
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <p className="text-2xl font-bold text-orange-600">{title}</p>
+        </a>
+        <p className="text-lg dark:text-gray-200/50 text-black font-semibold">
+          {publication} - {date}
+        </p>
         </div>
-      <p className='text-xl text-gray-200/50'>{date}</p>
+      </div>
     </div>
   );
 };

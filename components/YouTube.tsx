@@ -15,7 +15,7 @@ const YouTubeCard: React.FC<YouTubeProps> = ({ link, date, title }) => {
         <a href={link} target="_blank" rel="noopener noreferrer">
         <div className='p-4 grid items-center space-y-2'>
             <img className="rounded-md" src={thumbnailUrl} alt={`Thumbnail for video with id ${videoId}`} />
-            <p className='font-semibold text-md text-center text-white pt-4'>{title}</p>
+            <p className='font-semibold text-md text-center dark:text-white text-black pt-4'>{title}</p>
         </div>
         </a>
         </div>
